@@ -1,0 +1,666 @@
+[
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPP.Build.cs",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPP.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPP.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPPCharacter.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPPCharacter.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPPGameMode.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPPGameMode.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPPPlayerController.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/MP_CPPPlayerController.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/CombatAIController.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/CombatAIController.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/CombatEnemy.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/CombatEnemy.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/CombatEnemySpawner.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/CombatEnemySpawner.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/CombatStateTreeUtility.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/CombatStateTreeUtility.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/EnvQueryContext_Player.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/AI/EnvQueryContext_Player.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Animation/AnimNotify_CheckChargedAttack.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Animation/AnimNotify_CheckChargedAttack.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Animation/AnimNotify_CheckCombo.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Animation/AnimNotify_CheckCombo.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Animation/AnimNotify_DoAttackTrace.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Animation/AnimNotify_DoAttackTrace.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/CombatCharacter.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/CombatCharacter.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/CombatGameMode.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/CombatGameMode.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/CombatPlayerController.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/CombatPlayerController.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatActivationVolume.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatActivationVolume.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatCheckpointVolume.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatCheckpointVolume.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatDamageableBox.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatDamageableBox.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatDummy.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatDummy.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatLavaFloor.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Gameplay/CombatLavaFloor.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Interfaces/CombatActivatable.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Interfaces/CombatActivatable.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Interfaces/CombatAttacker.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Interfaces/CombatAttacker.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Interfaces/CombatDamageable.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/Interfaces/CombatDamageable.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/UI/CombatLifeBar.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Combat/UI/CombatLifeBar.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Platforming/Animation/AnimNotify_EndDash.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Platforming/Animation/AnimNotify_EndDash.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Platforming/PlatformingCharacter.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Platforming/PlatformingCharacter.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Platforming/PlatformingGameMode.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Platforming/PlatformingGameMode.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Platforming/PlatformingPlayerController.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_Platforming/PlatformingPlayerController.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/AI/SideScrollingAIController.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/AI/SideScrollingAIController.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/AI/SideScrollingNPC.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/AI/SideScrollingNPC.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/AI/SideScrollingStateTreeUtility.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/AI/SideScrollingStateTreeUtility.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Gameplay/SideScrollingJumpPad.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Gameplay/SideScrollingJumpPad.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Gameplay/SideScrollingMovingPlatform.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Gameplay/SideScrollingMovingPlatform.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Gameplay/SideScrollingPickup.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Gameplay/SideScrollingPickup.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Gameplay/SideScrollingSoftPlatform.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Gameplay/SideScrollingSoftPlatform.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Interfaces/SideScrollingInteractable.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/Interfaces/SideScrollingInteractable.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/SideScrollingCameraManager.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/SideScrollingCameraManager.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/SideScrollingCharacter.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/SideScrollingCharacter.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/SideScrollingGameMode.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/SideScrollingGameMode.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/SideScrollingPlayerController.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/SideScrollingPlayerController.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/UI/SideScrollingUI.cpp",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	},
+	{
+		"file": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Source/MP_CPP/Variant_SideScrolling/UI/SideScrollingUI.h",
+		"arguments": [
+			"/opt/unreal-engine/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/.vscode/compileCommands_Default/MP_CPP.1.rsp"
+		],
+		"directory": "/opt/unreal-engine/Engine/Source"
+	}
+]

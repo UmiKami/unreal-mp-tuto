@@ -1,0 +1,911 @@
+{
+	"folders": [
+		{
+			"name": "MP_CPP",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/opt/unreal-engine"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/opt/unreal-engine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/opt/unreal-engine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/opt/unreal-engine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "MP_CPP Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Test",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Test",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Test",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Shipping",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Shipping",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"Linux",
+					"Shipping",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Test",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Test",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Test",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Shipping",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Shipping",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPP LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPP LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPP",
+					"LinuxArm64",
+					"Shipping",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPPEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"Debug",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPPEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"DebugGame",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MP_CPPEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			},
+			{
+				"label": "MP_CPPEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"MP_CPPEditor",
+					"Linux",
+					"Development",
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/unreal-engine"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch MP_CPP (Debug)",
+				"request": "launch",
+				"program": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "MP_CPP Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/opt/unreal-engine",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/unreal-engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/MP_CPP": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP",
+					"/UEVFS/Root": "/opt/unreal-engine"
+				}
+			},
+			{
+				"name": "Launch MP_CPP (DebugGame)",
+				"request": "launch",
+				"program": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "MP_CPP Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/opt/unreal-engine",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/unreal-engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/MP_CPP": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP",
+					"/UEVFS/Root": "/opt/unreal-engine"
+				}
+			},
+			{
+				"name": "Launch MP_CPP (Development)",
+				"request": "launch",
+				"program": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "MP_CPP Linux Development Build",
+				"args": [
+				],
+				"cwd": "/opt/unreal-engine",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/unreal-engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/MP_CPP": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP",
+					"/UEVFS/Root": "/opt/unreal-engine"
+				}
+			},
+			{
+				"name": "Launch MP_CPP (Test)",
+				"request": "launch",
+				"program": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "MP_CPP Linux Test Build",
+				"args": [
+				],
+				"cwd": "/opt/unreal-engine",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/unreal-engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/MP_CPP": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP",
+					"/UEVFS/Root": "/opt/unreal-engine"
+				}
+			},
+			{
+				"name": "Launch MP_CPP (Shipping)",
+				"request": "launch",
+				"program": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "MP_CPP Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/opt/unreal-engine",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/unreal-engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/MP_CPP": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP",
+					"/UEVFS/Root": "/opt/unreal-engine"
+				}
+			},
+			{
+				"name": "Launch MP_CPPEditor (Debug)",
+				"request": "launch",
+				"program": "/opt/unreal-engine/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "MP_CPPEditor Linux Debug Build",
+				"args": [
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject"
+				],
+				"cwd": "/opt/unreal-engine",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/unreal-engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/MP_CPP": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP",
+					"/UEVFS/Root": "/opt/unreal-engine"
+				}
+			},
+			{
+				"name": "Launch MP_CPPEditor (DebugGame)",
+				"request": "launch",
+				"program": "/opt/unreal-engine/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "MP_CPPEditor Linux DebugGame Build",
+				"args": [
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject"
+				],
+				"cwd": "/opt/unreal-engine",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/unreal-engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/MP_CPP": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP",
+					"/UEVFS/Root": "/opt/unreal-engine"
+				}
+			},
+			{
+				"name": "Launch MP_CPPEditor (Development)",
+				"request": "launch",
+				"program": "/opt/unreal-engine/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "MP_CPPEditor Linux Development Build",
+				"args": [
+					"/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject"
+				],
+				"cwd": "/opt/unreal-engine",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/unreal-engine/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/MP_CPP": "/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP",
+					"/UEVFS/Root": "/opt/unreal-engine"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/opt/unreal-engine/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/ernestog/Documents/GameDev/Projects/Unreal Projects/MP_CPP/MP_CPP.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/opt/unreal-engine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/opt/unreal-engine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/opt/unreal-engine/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/opt/unreal-engine"
+			}
+		]
+	}
+}
