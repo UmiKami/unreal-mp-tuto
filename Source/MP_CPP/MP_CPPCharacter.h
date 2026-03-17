@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Interaction/MP_Player.h"
 #include "Logging/LogMacros.h"
 #include "MP_CPPCharacter.generated.h"
 
@@ -19,7 +20,7 @@ DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
  *  Implements a controllable orbiting camera
  */
 UCLASS(abstract)
-class AMP_CPPCharacter : public ACharacter
+class AMP_CPPCharacter : public ACharacter, public IMP_Player
 {
 	GENERATED_BODY()
 
@@ -48,24 +49,32 @@ protected:
 	/** Mouse Look Input Action */
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* MouseLookAction;
-
+	
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* PrintArmorAction;
 public:
 
 	/** Constructor */
 	AMP_CPPCharacter();	
-
+	
+	void AddBonusSpeed(float BonusSpeed) const;
+	
+	// start IMP_Player Interface
+	virtual USkeletalMeshComponent* GetSkeletalMesh_Implementation() const override;	
+	virtual void GrantArmor_Implementation(float ArmorAmount) override;
+	// end IMP_Player Interface
 protected:
 
 	/** Initialize input action bindings */
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-protected:
-
+	
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+	
+	void PrintArmorValue(const FInputActionValue& Value);
 
 public:
 
@@ -85,12 +94,22 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoJumpEnd();
 
-public:
-
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	
+	/////////// Crash Course
+	
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
+	
+private:
+	UPROPERTY(ReplicatedUsing=OnRep_Armor)
+	float Armor;
+	
+	UFUNCTION()
+	void OnRep_Armor();
 };
 

@@ -1,6 +1,9 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "MP_CPPCharacter.h"
+
+#include <string>
+
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -11,6 +14,8 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "MP_CPP.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Net/UnrealNetwork.h"
 
 AMP_CPPCharacter::AMP_CPPCharacter()
 {
@@ -50,6 +55,22 @@ AMP_CPPCharacter::AMP_CPPCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
+void AMP_CPPCharacter::AddBonusSpeed(float BonusSpeed) const
+{
+	GetCharacterMovement()->MaxWalkSpeed += BonusSpeed;
+}
+
+USkeletalMeshComponent* AMP_CPPCharacter::GetSkeletalMesh_Implementation() const
+{
+	return GetMesh();
+}
+
+void AMP_CPPCharacter::GrantArmor_Implementation(float ArmorAmount)
+{
+	Armor = ArmorAmount;
+	UKismetSystemLibrary::PrintString(this, FString::FromInt(Armor), true, true, FLinearColor::Green);
+}
+
 void AMP_CPPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
@@ -65,6 +86,8 @@ void AMP_CPPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMP_CPPCharacter::Look);
+		
+		EnhancedInputComponent->BindAction(PrintArmorAction, ETriggerEvent::Triggered, this, &ThisClass::PrintArmorValue);
 	}
 	else
 	{
@@ -88,6 +111,12 @@ void AMP_CPPCharacter::Look(const FInputActionValue& Value)
 
 	// route the input
 	DoLook(LookAxisVector.X, LookAxisVector.Y);
+}
+
+void AMP_CPPCharacter::PrintArmorValue(const FInputActionValue& Value)
+{
+	UKismetSystemLibrary::PrintString(
+		this, FString::Printf(TEXT("Armor on %s: %.2f"), HasAuthority() ? TEXT("Server") : TEXT("Client"), Armor));
 }
 
 void AMP_CPPCharacter::DoMove(float Right, float Forward)
@@ -130,4 +159,17 @@ void AMP_CPPCharacter::DoJumpEnd()
 {
 	// signal the character to stop jumping
 	StopJumping();
+}
+
+void AMP_CPPCharacter::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	
+	DOREPLIFETIME(ThisClass, Armor);
+}
+
+void AMP_CPPCharacter::OnRep_Armor()
+{
+	UKismetSystemLibrary::PrintString(
+	this, FString::Printf(TEXT("Armor Value CHANGED: %.2f"), Armor), true, true, FColor::Orange);
 }
