@@ -5,6 +5,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "TimerManager.h"
 #include "Engine/World.h"
+#include "Net/UnrealNetwork.h"
 
 ACombatDamageableBox::ACombatDamageableBox()
 {
@@ -74,5 +75,12 @@ void ACombatDamageableBox::HandleDeath()
 void ACombatDamageableBox::ApplyHealing(float Healing, AActor* Healer)
 {
 	// stub
+}
+
+void ACombatDamageableBox::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	
+	DOREPLIFETIME(ThisClass, CurrentHP);
 }
 

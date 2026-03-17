@@ -27,7 +27,7 @@ public:
 protected:
 
 	/** Amount of HP this box starts with. */
-	UPROPERTY(EditAnywhere, Category="Damage")
+	UPROPERTY(EditAnywhere, Category="Damage", Replicated)
 	float CurrentHP = 3.0f;
 
 	/** Time to wait before we remove this box from the level. */
@@ -65,4 +65,6 @@ public:
 	virtual void ApplyHealing(float Healing, AActor* Healer) override;
 
 	// ~End CombatDamageable interface
+	
+	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
 };

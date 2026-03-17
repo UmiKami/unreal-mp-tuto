@@ -74,7 +74,7 @@ protected:
 	float MaxHP = 5.0f;
 
 	/** Current amount of HP the character has */
-	UPROPERTY(VisibleAnywhere, Category="Damage")
+	UPROPERTY(VisibleAnywhere, Category="Damage", Replicated)
 	float CurrentHP = 0.0f;
 
 	/** Life bar widget fill color */
@@ -306,4 +306,6 @@ public:
 
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	
+	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
 };

@@ -15,6 +15,7 @@
 #include "TimerManager.h"
 #include "Engine/LocalPlayer.h"
 #include "CombatPlayerController.h"
+#include "Net/UnrealNetwork.h"
 
 ACombatCharacter::ACombatCharacter()
 {
@@ -482,5 +483,12 @@ void ACombatCharacter::NotifyControllerChanged()
 	{
 		PC->SetRespawnTransform(GetActorTransform());
 	}
+}
+
+void ACombatCharacter::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	
+	DOREPLIFETIME(ThisClass, CurrentHP);
 }
 
