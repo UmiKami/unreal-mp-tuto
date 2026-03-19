@@ -3,6 +3,8 @@
 
 #include "MP_MultiplayerUtils.h"
 
+#include "Kismet/KismetSystemLibrary.h"
+
 void UMP_MultiplayerUtils::PrintLocalNetRole(AActor* Actor)
 {
 	if (Actor->HasAuthority())
@@ -61,4 +63,10 @@ void UMP_MultiplayerUtils::PrintRemoteNetRole(AActor* Actor)
 		UE_LOG(LogTemp, Warning, TEXT("Actor [%s] has Max Role on remote."), *Actor->GetName())
 		break;
 	}
+}
+
+void UMP_MultiplayerUtils::PrintToScreen(UObject* WCTXObj, FString Msg, FColor TextColor)
+{
+	UKismetSystemLibrary::PrintString(
+	WCTXObj,Msg, true, true, TextColor);
 }

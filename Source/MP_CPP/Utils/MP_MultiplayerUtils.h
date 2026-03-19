@@ -19,4 +19,8 @@ class MP_CPP_API UMP_MultiplayerUtils : public UBlueprintFunctionLibrary
 	
 	UFUNCTION(BlueprintCallable, meta=(DefaultToSelf=Actor))
 	static void PrintRemoteNetRole(AActor* Actor);
+	
+public:
+	UFUNCTION()
+	static void PrintToScreen(UObject* WCTXObj, FString Msg, FColor TextColor);
 };
