@@ -16,12 +16,13 @@
 #include "MP_CPP.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Net/UnrealNetwork.h"
+#include "Utils/MP_MultiplayerUtils.h"
 
 AMP_CPPCharacter::AMP_CPPCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
-		
+
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
@@ -74,8 +75,8 @@ void AMP_CPPCharacter::GrantArmor_Implementation(float ArmorAmount)
 void AMP_CPPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
-	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
-		
+	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
+	{
 		// Jumping
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
@@ -86,12 +87,16 @@ void AMP_CPPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMP_CPPCharacter::Look);
-		
-		EnhancedInputComponent->BindAction(PrintArmorAction, ETriggerEvent::Triggered, this, &ThisClass::PrintArmorValue);
+
+		EnhancedInputComponent->BindAction(PrintArmorAction, ETriggerEvent::Triggered, this,
+		                                   &ThisClass::PrintArmorValue);
 	}
 	else
 	{
-		UE_LOG(LogMP_CPP, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
+		UE_LOG(LogMP_CPP, Error,
+		       TEXT(
+			       "'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."
+		       ), *GetNameSafe(this));
 	}
 }
 
@@ -165,11 +170,34 @@ void AMP_CPPCharacter::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	
+	/* Marks variable for replication */
 	DOREPLIFETIME(ThisClass, Armor);
+	DOREPLIFETIME(ThisClass, PickupCount);
 }
+
+void AMP_CPPCharacter::AddToPickupCount_Implementation()
+{
+	IMP_Player::AddToPickupCount_Implementation();
+	
+	if (!HasAuthority()) return;
+
+	PickupCount++;
+}
+
+/*
+ * OnRep_ methods are only called on Clients. EXCEPT for Blueprints where they are also called on Server.
+ */
 
 void AMP_CPPCharacter::OnRep_Armor()
 {
-	UKismetSystemLibrary::PrintString(
-	this, FString::Printf(TEXT("Armor Value CHANGED: %.2f"), Armor), true, true, FColor::Orange);
+	UMP_MultiplayerUtils::PrintToScreen(this, FString::Printf(TEXT("Armor Value CHANGED: %.2f"), Armor), FColor::Orange);
+}
+
+void AMP_CPPCharacter::OnRep_PickupCount(int32 PreviousCount)
+{
+	UMP_MultiplayerUtils::PrintToScreen(
+	this, FString::Printf(TEXT("Previous Pickup Count: %d"), PreviousCount), FColor::Yellow);
+	
+	UMP_MultiplayerUtils::PrintToScreen(
+	this, FString::Printf(TEXT("New item picked up. New Pickup Amount: %d"), PickupCount), FColor::Purple);
 }

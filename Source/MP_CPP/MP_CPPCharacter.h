@@ -100,10 +100,11 @@ public:
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 	
-	/////////// Crash Course
+#pragma region Crash Course
 	
-public:
 	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
+	
+	virtual void AddToPickupCount_Implementation() override;
 	
 private:
 	UPROPERTY(ReplicatedUsing=OnRep_Armor)
@@ -111,5 +112,14 @@ private:
 	
 	UFUNCTION()
 	void OnRep_Armor();
+	
+	UPROPERTY(ReplicatedUsing=OnRep_PickupCount)
+	int32 PickupCount = 0;
+	
+	UFUNCTION()
+	void OnRep_PickupCount(int32 PreviousCount);
+	
+#pragma endregion
+	
 };
 
