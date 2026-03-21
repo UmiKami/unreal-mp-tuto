@@ -88,8 +88,8 @@ void AMP_CPPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMP_CPPCharacter::Look);
 
-		EnhancedInputComponent->BindAction(PrintArmorAction, ETriggerEvent::Triggered, this,
-		                                   &ThisClass::PrintArmorValue);
+		EnhancedInputComponent->BindAction(PrintArmorAction, ETriggerEvent::Started, this,
+		                                   &ThisClass::GeneralInput);
 	}
 	else
 	{
@@ -118,10 +118,11 @@ void AMP_CPPCharacter::Look(const FInputActionValue& Value)
 	DoLook(LookAxisVector.X, LookAxisVector.Y);
 }
 
-void AMP_CPPCharacter::PrintArmorValue(const FInputActionValue& Value)
+void AMP_CPPCharacter::GeneralInput(const FInputActionValue& Value)
 {
-	UKismetSystemLibrary::PrintString(
-		this, FString::Printf(TEXT("Armor on %s: %.2f"), HasAuthority() ? TEXT("Server") : TEXT("Client"), Armor));
+	bReplicatePickupCount = !bReplicatePickupCount;
+	
+	UMP_MultiplayerUtils::PrintToScreen(this, FString::Printf(TEXT("bReplicatePickupCount: %d"), bReplicatePickupCount), FColor::Emerald);
 }
 
 void AMP_CPPCharacter::DoMove(float Right, float Forward)
@@ -171,8 +172,21 @@ void AMP_CPPCharacter::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	
 	/* Marks variable for replication */
-	DOREPLIFETIME(ThisClass, Armor);
-	DOREPLIFETIME(ThisClass, PickupCount);
+	// DOREPLIFETIME(ThisClass, Armor);
+	DOREPLIFETIME_CONDITION(ThisClass, Armor, COND_InitialOrOwner);
+	
+	DOREPLIFETIME_CONDITION(ThisClass, PickupCount, COND_Custom);
+	
+}
+
+void AMP_CPPCharacter::PreReplication(IRepChangedPropertyTracker& ChangedPropertyTracker)
+{
+	Super::PreReplication(ChangedPropertyTracker);
+	
+	// If bReplicatePickupCount changes value, PickupCount will change replication status
+	// Note: bReplicatePickupCount only matters on the server.
+	// Note: NetCore module needs to be added to Build.cs for this function to work on compile.
+	DOREPLIFETIME_ACTIVE_OVERRIDE(ThisClass, PickupCount, bReplicatePickupCount);
 }
 
 void AMP_CPPCharacter::AddToPickupCount_Implementation()

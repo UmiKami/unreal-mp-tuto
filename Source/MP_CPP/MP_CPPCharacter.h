@@ -74,7 +74,7 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 	
-	void PrintArmorValue(const FInputActionValue& Value);
+	void GeneralInput(const FInputActionValue& Value);
 
 public:
 
@@ -103,7 +103,7 @@ public:
 #pragma region Crash Course
 	
 	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
-	
+	virtual void PreReplication(IRepChangedPropertyTracker& ChangedPropertyTracker) override;
 	virtual void AddToPickupCount_Implementation() override;
 	
 private:
@@ -118,6 +118,8 @@ private:
 	
 	UFUNCTION()
 	void OnRep_PickupCount(int32 PreviousCount);
+	
+	bool bReplicatePickupCount = false;
 	
 #pragma endregion
 	

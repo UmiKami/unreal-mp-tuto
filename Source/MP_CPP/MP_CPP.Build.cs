@@ -11,6 +11,7 @@ public class MP_CPP : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[] {
 			"Core",
 			"CoreUObject",
+			"NetCore",
 			"Engine",
 			"InputCore",
 			"EnhancedInput",
