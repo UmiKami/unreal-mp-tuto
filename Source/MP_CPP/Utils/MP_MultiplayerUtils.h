@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "MP_MultiplayerUtils.generated.h"
 
 /**
@@ -24,3 +25,13 @@ public:
 	UFUNCTION()
 	static void PrintToScreen(UObject* WCTXObj, FString Msg, FColor TextColor, float Duration = 5.f);
 };
+
+
+namespace UHelper
+{
+	static void PrintToScreen(UObject* WCTXObj, FString Msg, FColor TextColor, float Duration = 5.f)
+	{
+		UKismetSystemLibrary::PrintString(
+WCTXObj,Msg, true, true, TextColor, Duration);
+	}
+}
