@@ -65,8 +65,8 @@ void UMP_MultiplayerUtils::PrintRemoteNetRole(AActor* Actor)
 	}
 }
 
-void UMP_MultiplayerUtils::PrintToScreen(UObject* WCTXObj, FString Msg, FColor TextColor)
+void UMP_MultiplayerUtils::PrintToScreen(UObject* WCTXObj, FString Msg, FColor TextColor, float Duration)
 {
 	UKismetSystemLibrary::PrintString(
-	WCTXObj,Msg, true, true, TextColor);
+	WCTXObj,Msg, true, true, TextColor, Duration);
 }

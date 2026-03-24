@@ -22,5 +22,5 @@ class MP_CPP_API UMP_MultiplayerUtils : public UBlueprintFunctionLibrary
 	
 public:
 	UFUNCTION()
-	static void PrintToScreen(UObject* WCTXObj, FString Msg, FColor TextColor);
+	static void PrintToScreen(UObject* WCTXObj, FString Msg, FColor TextColor, float Duration = 5.f);
 };
