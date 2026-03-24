@@ -8,6 +8,8 @@
 #include "Logging/LogMacros.h"
 #include "MP_CPPCharacter.generated.h"
 
+class AMP_RPCActor;
+class UMP_HealthComponent;
 class USpringArmComponent;
 class UCameraComponent;
 class UInputAction;
@@ -52,6 +54,9 @@ protected:
 	
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* PrintArmorAction;
+	
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* SpawnObjectAction;
 public:
 
 	/** Constructor */
@@ -120,6 +125,31 @@ private:
 	void OnRep_PickupCount(int32 PreviousCount);
 	
 	bool bReplicatePickupCount = false;
+	
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<UMP_HealthComponent> HealthComponent;
+	
+	/* Remote Procedure Call (RPC) - Client, Server, and NetMulticast */
+	
+	UFUNCTION(Client, Reliable)
+	void Client_PrintMessage(const FString& Message);
+	
+	FTimerHandle RPCDelayTimer;
+	
+	void OnRPCDelayTimer();
+	
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AMP_RPCActor> SpawnObjectClass;
+	
+	UFUNCTION(Server, Reliable)
+	void DoSpawnObject();
+	
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_PrintMessage(const FString& Message);
+	
+	
+protected:
+	virtual void BeginPlay() override;
 	
 #pragma endregion
 	

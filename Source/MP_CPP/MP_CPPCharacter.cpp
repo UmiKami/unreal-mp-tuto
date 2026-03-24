@@ -14,6 +14,9 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "MP_CPP.h"
+#include "Actors/MP_RPCActor.h"
+#include "Components/MP_HealthComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Net/UnrealNetwork.h"
 #include "Utils/MP_MultiplayerUtils.h"
@@ -54,7 +57,11 @@ AMP_CPPCharacter::AMP_CPPCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
+	
+	HealthComponent = CreateDefaultSubobject<UMP_HealthComponent>("HealthComponent");
 }
+
+
 
 void AMP_CPPCharacter::AddBonusSpeed(float BonusSpeed) const
 {
@@ -90,6 +97,9 @@ void AMP_CPPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 		EnhancedInputComponent->BindAction(PrintArmorAction, ETriggerEvent::Started, this,
 		                                   &ThisClass::GeneralInput);
+		
+		EnhancedInputComponent->BindAction(SpawnObjectAction, ETriggerEvent::Started, this,
+		                                   &ThisClass::DoSpawnObject);
 	}
 	else
 	{
@@ -120,9 +130,7 @@ void AMP_CPPCharacter::Look(const FInputActionValue& Value)
 
 void AMP_CPPCharacter::GeneralInput(const FInputActionValue& Value)
 {
-	bReplicatePickupCount = !bReplicatePickupCount;
-	
-	UMP_MultiplayerUtils::PrintToScreen(this, FString::Printf(TEXT("bReplicatePickupCount: %d"), bReplicatePickupCount), FColor::Emerald);
+	Server_PrintMessage("dda");
 }
 
 void AMP_CPPCharacter::DoMove(float Right, float Forward)
@@ -196,6 +204,11 @@ void AMP_CPPCharacter::AddToPickupCount_Implementation()
 	if (!HasAuthority()) return;
 
 	PickupCount++;
+
+	if (IsValid(HealthComponent))
+	{
+		HealthComponent->AddHealth(50.f);
+	}
 }
 
 /*
@@ -215,3 +228,59 @@ void AMP_CPPCharacter::OnRep_PickupCount(int32 PreviousCount)
 	UMP_MultiplayerUtils::PrintToScreen(
 	this, FString::Printf(TEXT("New item picked up. New Pickup Amount: %d"), PickupCount), FColor::Purple);
 }
+
+
+void AMP_CPPCharacter::OnRPCDelayTimer()
+{
+	// if (HasAuthority())
+	// {
+	// 	 Client_PrintMessage("This message has been sent from the server down to Client RPC.");
+	// }
+	if (!HasAuthority()) return;
+
+	DoSpawnObject();
+}
+
+void AMP_CPPCharacter::DoSpawnObject_Implementation()
+{
+	
+	if (UWorld* World = GetWorld())
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		World->SpawnActor<AMP_RPCActor>(SpawnObjectClass ,GetActorLocation(), GetActorRotation(),SpawnParams);
+	}
+
+}
+
+bool AMP_CPPCharacter::Server_PrintMessage_Validate(const FString& Message)
+{
+	return !Message.IsEmpty();
+}
+
+void AMP_CPPCharacter::Server_PrintMessage_Implementation(const FString& Message)
+{
+	FString MessageString = HasAuthority() ? "Server: " : "Client: ";
+	MessageString += Message;
+	
+	UMP_MultiplayerUtils::PrintToScreen(this, MessageString, FColor::Cyan); 
+}
+
+void AMP_CPPCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	GetWorldTimerManager().SetTimer(RPCDelayTimer, this, &AMP_CPPCharacter::OnRPCDelayTimer, 4.f, false);
+}
+
+void AMP_CPPCharacter::Client_PrintMessage_Implementation(const FString& Message)
+{
+	FString MessageString = HasAuthority() ? "Server: " : "Client: ";
+	MessageString += Message;
+	
+	UMP_MultiplayerUtils::PrintToScreen(this, MessageString, FColor::Yellow); 
+}
+
+
