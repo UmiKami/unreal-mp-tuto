@@ -17,6 +17,8 @@ protected:
 	virtual void StartMatch() override;
 	virtual void BeginPlay() override;
 	
+	virtual void PostLogin(APlayerController* NewPlayer) override;
+	
 private:
 	FTimerHandle MatchStartDelay;
 	
