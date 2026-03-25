@@ -27,7 +27,7 @@ void AMP_GameState::AddControllerToTeam(APlayerController* PC, int8 TeamNumber)
 	}
 }
 
-TArray<APlayerController*> AMP_GameState::GetTeam(int8 TeamNumber)
+TArray<TObjectPtr<APlayerController>> AMP_GameState::GetTeam(int8 TeamNumber)
 {
 	switch (TeamNumber)
 	{
@@ -40,7 +40,7 @@ TArray<APlayerController*> AMP_GameState::GetTeam(int8 TeamNumber)
 	}
 }
 
-TArray<APlayerController*> AMP_GameState::GetTeamByPlayController(APlayerController* PC)
+TArray<TObjectPtr<APlayerController>> AMP_GameState::GetTeamByPlayController(APlayerController* PC)
 {
 	if (TeamOne.Contains(PC)) return TeamOne;
 	if (TeamTwo.Contains(PC)) return TeamTwo;

@@ -19,8 +19,10 @@ public:
 
 	void AddControllerToTeam(APlayerController* PC, int8 TeamNumber);
 	
-	TArray<APlayerController*> GetTeam(int8 TeamNumber);
-	TArray<APlayerController*> GetTeamByPlayController(APlayerController* PC);
+	TArray<TObjectPtr<APlayerController>> GetTeam(int8 TeamNumber);
+	TArray<TObjectPtr<APlayerController>> GetTeamByPlayController(APlayerController* PC);
+	
+	UFUNCTION(BlueprintCallable)
 	FString GetTeamNameByPlayController(APlayerController* PC) const;
 protected:
 	// NOTE: GetLifetimeReplicatedProps method is REQUIRED when you have ANY replicated members of a class.
@@ -28,8 +30,8 @@ protected:
 	
 private:
 	UPROPERTY(VisibleAnywhere, Replicated)
-	TArray<APlayerController*> TeamOne = {};
+	TArray<TObjectPtr<APlayerController>> TeamOne = {};
 	
 	UPROPERTY(VisibleAnywhere, Replicated)
-	TArray<APlayerController*> TeamTwo = {};
+	TArray<TObjectPtr<APlayerController>> TeamTwo = {};
 };
