@@ -25,19 +25,19 @@ void AMP_GameMode::PostLogin(APlayerController* NewPlayer)
 {
 	Super::PostLogin(NewPlayer);
 	
-	AMP_GameState* MPGameState = CastChecked<AMP_GameState>(GameState);
-
-	TArray<APlayerController*> TeamOne = MPGameState->GetTeam(1);
-	TArray<APlayerController*> TeamTwo = MPGameState->GetTeam(2);
+	if (AMP_GameState* MPGameState = GetGameState<AMP_GameState>())
+	{
+		TArray<TObjectPtr<APlayerController>> TeamOne = MPGameState->GetTeam(1);
+		TArray<TObjectPtr<APlayerController>> TeamTwo = MPGameState->GetTeam(2);
 	
-	if (TeamOne.Num() >= TeamTwo.Num())
-	{
-		MPGameState->AddControllerToTeam(NewPlayer, 2);
-	} else
-	{
-		MPGameState->AddControllerToTeam(NewPlayer, 1);
+		if (TeamOne.Num() >= TeamTwo.Num())
+		{
+			MPGameState->AddControllerToTeam(NewPlayer, 2);
+		} else
+		{
+			MPGameState->AddControllerToTeam(NewPlayer, 1);
+		}
 	}
-	
 }
 
 void AMP_GameMode::OnMatchStart()
