@@ -16,6 +16,8 @@
 #include "MP_CPP.h"
 #include "Actors/MP_RPCActor.h"
 #include "Components/MP_HealthComponent.h"
+#include "Game/MP_GameState.h"
+#include "GameFramework/GameSession.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Net/UnrealNetwork.h"
@@ -130,7 +132,14 @@ void AMP_CPPCharacter::Look(const FInputActionValue& Value)
 
 void AMP_CPPCharacter::GeneralInput(const FInputActionValue& Value)
 {
-	Server_PrintMessage("dda");
+	// Server_PrintMessage("dda");
+	
+	AMP_GameState* MPGameState = CastChecked<AMP_GameState>(UGameplayStatics::GetGameState(this));
+	
+	if(APlayerController* PC = Cast<APlayerController>(GetController()))
+	{
+		UHelper::PrintToScreen(this, FString::Printf(TEXT("%s is on team %s"), *GetName(), *MPGameState->GetTeamNameByPlayController(PC) ) , FColor::Blue);
+	}
 }
 
 void AMP_CPPCharacter::DoMove(float Right, float Forward)
