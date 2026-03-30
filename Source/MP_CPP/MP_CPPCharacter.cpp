@@ -103,6 +103,8 @@ void AMP_CPPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		
 		EnhancedInputComponent->BindAction(SpawnObjectAction, ETriggerEvent::Started, this,
 		                                   &ThisClass::DoSpawnObject);
+		
+		EnhancedInputComponent->BindAction(ServerTravelAction, ETriggerEvent::Started, this, &ThisClass::ServerTravel);
 	}
 	else
 	{
@@ -139,6 +141,13 @@ void AMP_CPPCharacter::GeneralInput(const FInputActionValue& Value)
 	
 	UHelper::PrintToScreen(this, FString::FromInt(PS->GetPickupCount()), FColor::Orange);
 	
+}
+
+void AMP_CPPCharacter::ServerTravel(const FInputActionValue& Value)
+{
+	if (!HasAuthority()) return;
+	
+	GetWorld()->ServerTravel(DestinationMapURL);
 }
 
 void AMP_CPPCharacter::DoMove(float Right, float Forward)

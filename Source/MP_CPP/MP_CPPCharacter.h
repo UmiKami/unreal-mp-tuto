@@ -33,7 +33,7 @@ class AMP_CPPCharacter : public ACharacter, public IMP_Player
 	/** Follow camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FollowCamera;
-	
+
 protected:
 
 	/** Jump Input Action */
@@ -57,6 +57,13 @@ protected:
 	
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* SpawnObjectAction;
+	
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* ServerTravelAction;
+	
+	UPROPERTY(EditDefaultsOnly)
+	FString DestinationMapURL;
+	
 public:
 
 	/** Constructor */
@@ -80,7 +87,8 @@ protected:
 	void Look(const FInputActionValue& Value);
 	
 	void GeneralInput(const FInputActionValue& Value);
-
+	
+	void ServerTravel(const FInputActionValue& Value);
 public:
 
 	/** Handles move inputs from either controls or UI interfaces */
