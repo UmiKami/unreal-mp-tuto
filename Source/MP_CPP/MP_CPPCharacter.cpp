@@ -21,6 +21,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Net/UnrealNetwork.h"
+#include "Player/MP_PlayerState.h"
 #include "Utils/MP_MultiplayerUtils.h"
 
 AMP_CPPCharacter::AMP_CPPCharacter()
@@ -132,14 +133,12 @@ void AMP_CPPCharacter::Look(const FInputActionValue& Value)
 
 void AMP_CPPCharacter::GeneralInput(const FInputActionValue& Value)
 {
-	// Server_PrintMessage("dda");
+	AMP_PlayerState* PS = Cast<AMP_PlayerState>(GetPlayerState());
 	
-	AMP_GameState* MPGameState = CastChecked<AMP_GameState>(UGameplayStatics::GetGameState(this));
+	if (!IsValid(PS)) return;
 	
-	if(APlayerController* PC = Cast<APlayerController>(GetController()))
-	{
-		UHelper::PrintToScreen(this, FString::Printf(TEXT("%s is on team %s"), *GetName(), *MPGameState->GetTeamNameByPlayController(PC) ) , FColor::Blue);
-	}
+	UHelper::PrintToScreen(this, FString::FromInt(PS->GetPickupCount()), FColor::Orange);
+	
 }
 
 void AMP_CPPCharacter::DoMove(float Right, float Forward)
@@ -212,7 +211,10 @@ void AMP_CPPCharacter::AddToPickupCount_Implementation()
 	
 	if (!HasAuthority()) return;
 
-	PickupCount++;
+	if (AMP_PlayerState* PS = GetPlayerState<AMP_PlayerState>())
+	{
+		PS->IncreasePickupCount();
+	}
 
 	if (IsValid(HealthComponent))
 	{
@@ -231,11 +233,11 @@ void AMP_CPPCharacter::OnRep_Armor()
 
 void AMP_CPPCharacter::OnRep_PickupCount(int32 PreviousCount)
 {
-	UMP_MultiplayerUtils::PrintToScreen(
-	this, FString::Printf(TEXT("Previous Pickup Count: %d"), PreviousCount), FColor::Yellow);
-	
-	UMP_MultiplayerUtils::PrintToScreen(
-	this, FString::Printf(TEXT("New item picked up. New Pickup Amount: %d"), PickupCount), FColor::Purple);
+	// UMP_MultiplayerUtils::PrintToScreen(
+	// this, FString::Printf(TEXT("Previous Pickup Count: %d"), PreviousCount), FColor::Yellow);
+	//
+	// UMP_MultiplayerUtils::PrintToScreen(
+	// this, FString::Printf(TEXT("New item picked up. New Pickup Amount: %d"), PickupCount), FColor::Purple);
 }
 
 
@@ -289,7 +291,7 @@ void AMP_CPPCharacter::Client_PrintMessage_Implementation(const FString& Message
 	FString MessageString = HasAuthority() ? "Server: " : "Client: ";
 	MessageString += Message;
 	
-	UMP_MultiplayerUtils::PrintToScreen(this, MessageString, FColor::Yellow); 
+	// UMP_MultiplayerUtils::PrintToScreen(this, MessageString, FColor::Yellow); 
 }
 
 
